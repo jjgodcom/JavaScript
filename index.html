@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {font-size: 1.1em;}
+    </style>
+    <script>
+    // alert("얼럿");
+
+    var x;
+    document.write('x' + '<br>'); // x라는 단어 출력
+    document.write(x + '<br>'); // x를 호출(x에 아직 값이 없음)
+    x = '홍길동'; //x에 홍길동을 선언함
+    document.write(x , '<br>'); // 홍길동 호출
+    x = 235; // x에 235를 선언함
+    document.write(x , '<br>'); // 235호출(기존에 있던 홍길동 없어지고 235가 출력됨)
+
+    // = 대입연산자
+    // == 비교연산자 
+    // === 데이터의 자료형까지 비교함
+    
+    var x="1";
+    var y=1;
+    console.log(x==y); //true
+    console.log(x===y) //false
+    console.log(x!=y) //false
+    console.log(x>y); //false
+    console.log(x<y); //false
+    var x=2;
+    var y=3;
+    document.write(x>=y); //false
+    document.write('<br>');
+    document.write(x<=y); //true
+    document.write(x*y); // 곱하기
+    document.write('<br>');
+    document.write(x/y) // 나누기
+    document.write('<br>');
+    document.write('<br>');
+
+    var x=10,
+        y=2,
+        z=3,
+        w=4,
+        q=5;
+    document.write(x%y); // 나머지값을 계산()
+    document.write('<br>');
+    document.write(x%z); //나머지값을 계산
+    document.write('<br>');
+    document.write(x%w);
+    document.write('<br>');
+    document.write(x%q);
+    document.write('<br>');
+    document.write('<br>');
+
+    var x=10;
+    document.write(x);
+    document.write('<br>');
+    x+=1; //x=x+1;
+    document.write(x);
+    document.write('<br>');
+    x+=1; //x=x+1;
+    document.write(x);
+    document.write('<br>');
+    x+=1; //x=x+1;
+    document.write(x);
+    document.write('<br>');
+    document.write('<br>');
+
+    var x=10;
+    document.write(x);
+    document.write('<br>');
+    x-=1; //x=x-1;
+    document.write(x);
+    document.write('<br>');
+    x-=1; //x=x-1;
+    document.write(x);
+    document.write('<br>');
+    x-=1; //x=x-1;
+    document.write(x);
+    document.write('<br>');
+    document.write('<br>');
+
+    var x=10;
+    document.write(x);
+    document.write('<br>');
+    x^=1; //x=x*1;
+    document.write(x);
+    document.write('<br>');
+    x^=1; //x=x*1;
+    document.write(x);
+    document.write('<br>');
+    x^=1; //x=x*1;
+    document.write(x);
+    document.write('<br>');
+    document.write('<br>');
+
+    var x=10;
+    document.write(x); //10
+    document.write('<br>');
+    document.write(++x); // 전에 증가를시킴(현재 출력되는 값에 영향)
+    document.write('<br>');
+    document.write(x++); // 후에 증가를 시킴(다음값에 영향)
+    document.write('<br>');
+    document.write(x); //12가 출력됨
+    document.write('<br>');
+    document.write('<br>');
+
+    var x="안녕하세요";
+    document.write(x);
+    document.write('<br>');
+    x+="여러분!";
+    document.write(x);
+    document.write("<br>");
+    x+="사랑합니다!";
+    document.write(x);
+    document.write("<br>");
+    document.write("<br>");
+
+    var x=5,
+        y=3;
+        z=10;
+    document.write("&&는 두게다 맞아아 true "); // 두개다 맞으면 true
+    document.write("<br>");
+    document.write(x>y && x>z); // 두개다 맞으면 true
+    document.write("<br>");
+    document.write("||는 둘중 하나만 맞아도 true "); // 두개다 맞으면 true
+    document.write("<br>");
+    document.write(x>y || x>z); // 두개다 맞으면 true
+    document.write("<br>");
+    document.write("<br>");
+    
+    var x;
+    x= true && 10; //t일때 10 대입
+    document.write(x);
+    document.write("<br>");
+    x= false && 10;
+    document.write(x);
+    document.write("<br>");
+    x= true || 10
+    document.write(x);
+    document.write("<br>");
+    x= false || 10
+    document.write(x);
+    document.write("<br>");
+    document.write("<br>");
+    
+    var x;
+    x= x && 10;
+    document.write(x);
+    document.write("<br>");
+    x= x && 10;
+    document.write(x);
+    document.write("<br>");
+    x= x || 10
+    document.write(x);
+    document.write("<br>");
+    x= x || 10
+    document.write(x);
+    document.write("<br>");
+    document.write("<br>");
+
+ 
+
+    </script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1 id="re">응답</h1>
+    <!-- 버튼 클릭시 #re에 있는 html 호출을 변경한다. -->
+    <input type="button" value="변환" onclick="document.getElementById('re').innerHTML='허출'">
+</body>
+</html>

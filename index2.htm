@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var numberData = 12;
+        var strigData = "javjascript";
+        var booleanData = true;
+
+        console.log(typeof(numberData));
+        console.log(typeof strigData);
+        console.log(typeof booleanData);
+
+        var changeData1 = Number(numberData); //12
+        var changeData1_1 = Number(false); //12
+        var changeData2 = Boolean(numberData); //true
+        var changeData2_1 = Boolean(""); //false
+        var changeData2_2 = Boolean(0); //false
+        var changeData2_3 = Boolean(NaN); //false
+        var changeData2_4 = Boolean(null); //false
+        var changeData2_5 = Boolean(undefined); //false
+        
+        console.log(changeData1);
+        console.log(changeData1_1);
+        console.log(changeData2);
+        console.log(changeData2_1);
+        console.log(changeData2_2);
+        console.log(changeData2_3);
+        console.log(changeData2_4);
+        console.log(changeData2_5);
+        console.log("---------");
+
+        var changeData = !"html";
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = 12+"12";
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = "12"+12;
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = "12"+"12";
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = "12"-"12";
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = "12"*"12";
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = "12"/"12";
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = !false;
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = !"false";
+        console.log(changeData);
+        console.log("---------");
+
+        var changeData = numberData+"";
+        console.log(changeData);
+        console.log("---------");
+        
+        //Number() 숫자형, Strig() 문자형, Boolea() 에 넣으면 강제로 바뀐다.
+
+        console.log(true && false);
+        console.log(true || false);
+        console.log(!true);
+        console.log(!false);
+        console.log("---------");
+
+        // var min1, min2;
+        // var max, min;
+        // num1 = prompt("숫자를 입력해 주세요","0");
+        // num2 = prompt("숫자를 입력해 주세요","0");
+
+        // document.write("최댓값:"+max+","+"최솟값"+min);
+
+        // num1 = Number(prompt("숫자를 입력해 주세요","0"));
+        // num2 = Number(prompt("숫자를 입력해 주세요","0"));
+
+        // if(num1==num2){
+        //     alert("두 수가 동일한 수입니다");
+        // }else if(num1>num2){
+        //     max = num1;
+        //     min = num2;
+        //     document.write("최댓값:"+max+","+"최솟값"+min);
+        // }else{
+        //     max = num2;
+        //     min = num1;
+        //     document.write("최댓값:"+max+","+"최솟값"+min);
+        // }
+        
+        // var today = new Date().getDay();
+        // console.log(today); //3일경우 수요일 
+        // console.log("---------");
+
+        // switch(today){
+        //     // 문자열일떄는 "문자열"
+        //     case 1:
+        //     console.log("오늘은 월요일입니다.");
+        //     console.log("---------");
+        //     break;
+
+        //     case 2:
+        //     console.log("오늘은 화요일입니다.");
+        //     console.log("---------");
+        //     break;
+
+        //     case 3:
+        //     console.log("오늘은 수요일입니다.");
+        //     console.log("---------");
+        //     break;
+
+        //     case 4:
+        //     console.log("오늘은 목요일입니다.");
+        //     console.log("---------");
+        //     break;
+
+        //     case 5:
+        //     console.log("오늘은 금요일입니다.");
+        //     console.log("---------");
+        //     break;
+
+        //     case 6:
+        //     console.log("오늘은 토요일입니다.");
+        //     console.log("---------");
+        //     break;
+
+        //     default:
+        //     console.log("오늘은 일요일입니다.");
+        //     console.log("---------");
+        //     break;
+        // }
+
+        // var id = "jjgodcom";
+        // var pw = 1111;
+
+        // var user_id = prompt("아이디를 입력하세요");
+        // if(user_id = id){
+        //     var user_pw = prompt("비밀먼호릅 입력하세요");
+        //     if(user_pw == pw){
+        //         console.log("로그인 성공");
+        //     }else{
+        //         console.log("비밀번호가 다릅니다.");
+        //     }
+        // }else{
+        //     console.log("아이디가 다릅니다");
+        // }
+
+        // var input = "javascript";
+        // console.log(input.indexOf("java")); // 0
+        // console.log(input.indexOf("script")); // 4
+        // console.log(input.indexOf("html")); // 없을경우 -1
+        // console.log("---------");
+
+        var data = new Date();
+        
+        while(true){
+            var input = prompt("대화를 시작하세요");
+            if(input.indexOf("안녕") >= 0){
+            alert("안녕하세요");
+            }else if(input.indexOf("반갑") >= 0 || input.indexOf("반가") >= 0){
+                alert("반갑습니다.");
+            }else if(input.indexOf("날짜") >= 0 || input.indexOf("며칠") >= 0){
+                alert(data.getMonth()+1+"월"+data.getDate()+"일 입니다.");
+            }else if(input.indexOf("요일") >= 0){
+                switch (data.getDay()) {
+                    case 1:
+                        alert("오늘은 월요일 입니다");
+                        break;//멈춤
+
+                    case 2:
+                        alert("오늘은 화요일 입니다");
+                        break;//멈춤
+                    
+                    case 3:
+                        alert("오늘은 수요일 입니다");
+                        continue;//계속실행
+
+                    case 4:
+                        alert("오늘은 목요일 입니다");
+                        break;//멈춤
+                
+                    case 5:
+                        alert("오늘은 금요일 입니다");
+                        break;//멈춤
+                
+                    case 6:
+                        alert("오늘은 토요일 입니다");
+                        break;//멈춤
+
+                    default:
+                        alert("오늘은 일요일 입니다");
+                        break;
+                }
+            }else if(input.indexOf("시간") >= 0){
+                alert(data.getHours()+"시 입니다.");
+            }else if(input.indexOf("연도") >= 0){
+                alert(data.getYear()); //
+                alert(data.getFullYear()); // 20xx
+            }else{
+                alert("시간,요일,날짜,안녕,연도,반갑"+"중에 하나를 입력해 주세요");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
