@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>  
+    function run(){
+        for(let i = 0; i<5; i++){
+            console.log("asd");
+        }
+    }
+
+    run();
+    console.log("------");
+
+    var exec = function(){
+        console.log("함수의 또다른 선언 방법입니다.");
+    }
+    exec();
+    console.log("------");
+
+    function run2(num){
+        var output = num*num;
+        return output
+    }
+    console.log(run2(2));
+    console.log(run2(4));
+    console.log("------");
+
+    var exec2 = function(num){
+        var output = num+num;
+        return output
+    }
+    console.log(exec2(8));
+    console.log(exec2(16));
+    console.log("------");
+
+    var go = (n) =>{
+        var output = n*n;
+        return output
+    }
+    console.log(go(4));
+    console.log("또다른 함수 선언 방법 입니다.");
+    console.log("------");
+    
+    function calc(n,m,s){
+        switch (s) {
+            case "+":
+                output=n+m;
+                console.log(n+"+"+m+"="+n+m+"입니다.");
+                break;
+            case "-":
+                output=n-m;
+                console.log(n+"-"+m+"="+(n-m)+"입니다.");
+                break;
+            case "*":
+                output=n*m;
+                console.log(n+"*"+m+"="+n*m+"입니다.");
+                break;
+            case "/":
+                output=n/m;
+                console.log(n+"/"+m+"="+n/m+"입니다.");
+                break;
+        
+            default:
+                console.log("+ , _ , * , / 중에 하나를 사용하세요.");
+                break;
+        }
+    }
+    calc(1,7,"+");
+    calc(1,7,"-");
+    calc(1,7,"*");
+    calc(1,7,"/");
+    calc(1,7,"");
+    console.log("------");
+
+    var n_sum = function(){
+        var n = prompt("1~100 사이의 정수를 입력해 주세요.");
+        var s = sum(n);
+        console.log(s);
+        console.log("------");
+    }
+    function sum(num){
+        var res = 0;
+        for(var i =0; i<num;i++){
+            res+= i; // res = res+i;
+        }
+        return res
+    }
+    console.log("------");
+
+    function sumInput(){
+        var output=0;
+        for(var i =0; i<arguments.length; i++){
+            console.log(i+"번째 값은"+arguments[i]);
+            output += arguments[i];
+        }
+        return output
+        // console.log(arguments);
+    }
+    console.log(sumInput(1,8,3,4,5,6,7,8,9,10));
+    console.log("arguments 는 모든 인자값을 받는다.");
+    console.log("------");
+
+    function testA(a,b,c){
+        if(typeof(a) == "undefined"){
+            a = 10;
+            // a에 값이 없을 경우 10을 넣는다.
+        }
+        if(!b){
+            b = 20;
+            //b의 값이 false 이거나 없을 경우 20을 넣는다
+        }
+        c = c || 30;
+        // c에 값이 잇을경우는 true 니까 c가 그대로 출력이 되고
+        // c의 값이 없을경우는 false 니까 30이 출력된다.
+        // 해석이 필요하다 ㅠㅠ.
+        console.log(a,b,c);
+    }
+    testA(1,2);
+    console.log("------");
+
+    function testB(a=10,b=20,c=30){
+        console.log(a,b,c);
+    }
+    testB(8,10);
+    console.log("------");
+
+    (function(){
+        console.log("펑션의 이름이 없이 실행");
+    })();
+    console.log("------");
+
+    call(3,function(){console.log("출력")});
+    function call(n, callback){
+        for(var i = 0; i<n; i++){
+            console.log(i+"번째");
+            callback();
+        }
+    }
+    console.log("콜백 함수 호출 방법 입니다..");
+    console.log("------");
+
+    function rtn(){
+        var output = function(){
+            console.log("출력qqq");
+        }
+        return output
+    }
+    rtn()();
+    console.log("콜백 함수에 또다른 방법입니다.");
+    console.log("------");
+
+    var a = 10, b=20, c=30; // 전역변수
+    function returnFunc(){
+        var a = 10, b=20, c=30; //지역변수
+        console.log("지역변수"+a,b,c);
+    }
+    returnFunc();
+    console.log("전역변수"+a,b,c);
+    console.log("------");
+
+    function returnFunc(){
+        var a = 10, b=20, c=30;
+        return function(){console.log(a,b,c)}
+        
+    }
+    returnFunc()();
+    console.log("closure(클로저) 라는 방법이다.");
+    console.log("------");
+
+    setTimeout(function(){
+        console.log("셋타임 출력 입니다.");
+        console.log("------");
+    },1000);
+    console.log("------");
+
+    // setInterval(function(){
+    //     console.log("일정 시간 마다 반복");
+    // },1000);
+    console.log("------");
+
+    var str = "https://www.naver.com/홈페이지.html";
+    var estr = escape(str);
+    console.log(estr);
+    console.log("뭐지 이게1");
+    var ustr = unescape(estr);
+    console.log(ustr);
+    console.log("뭐지 이게2");
+    var enstr = encodeURI(str);
+    console.log(enstr);
+    console.log("뭐지 이게3");
+    var ecstr = encodeURIComponent(str);
+    console.log(ecstr);
+    console.log("뭐지 이게4");
+    console.log("인코드와 디코드 입니다.");
+    console.log("------");
+
+    console.log(isFinite(10));
+    console.log(isFinite(10/0));
+    console.log("isFinite() 를 사용할 경우  무한일 경우 flase 나옴");
+    console.log("------");
+
+    console.log(typeof(Number("123")));
+    console.log(isNaN(Number("asd")));
+    console.log("typeof() 를 이용");
+    console.log("------");
+
+    var num = "200.05원";
+    console.log(Number(num));
+    console.log("------");
+
+    console.log(parseInt(num));
+    console.log("parseInt() 는 소수점 제거해줌");
+    console.log("------");
+
+    console.log(parseFloat(num));
+    console.log("parseFloat() 는 소수점 까지 구함");
+    console.log("------");
+
+    console.log(parseInt(num,16));
+    console.log(parseInt(num,8));
+    console.log(parseInt(100,2));
+    console.log(parseFloat("52.000e3"));
+    console.log("------");
+    </script>
+</head>
+<body>
+    <input type="button" value="합을 계산" onclick="n_sum()">
+</body>
+</html>
