@@ -1,7 +1,4 @@
 var superObj = {superVal:'super'}
-// var subObj = {subVal:'sub'}
-
-// subObj.__proto__ = superObj;
 var subObj = Object.create(superObj);
 subObj.subVal = 'sub'
 console.log('subObj.subVal 의 값은',subObj.subVal);
