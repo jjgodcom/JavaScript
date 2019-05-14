@@ -1,25 +1,31 @@
-class person{
+class Person{
     constructor(name, first, second){
         this.name = name;
         this.first = first;
         this.second = second;
     }
     sum(){
-        return (this.first+this.second);
+        return this.first+this.second;
     }
-
 }
-
-class personPlus extends person{
+class PersonPlus extends Person{
+    constructor(name, first, second, third){
+        super(name, first, second);
+        this.third = third;
+    }
+    sum(){
+        return super.sum()+this.third;
+    }
     avg(){
-        return (this.first+this.second)/2;
+        return (this.first+this.second+this.third)/3;
     }
 }
+ 
+var kim = new PersonPlus('kim', 10, 20, 30);
+console.log("kim.sum()", kim.sum());
+console.log("kim.avg()", kim.avg());
 
-var kim = new personPlus('kim',10,20);
-console.log('kim.sum() 값은',kim.sum());
-console.log('kim.avg() 값은',kim.avg());
-
-// 상속에 대해서 알아보자
-// 여러곳에서 쓸수도 있으니 코드를 수정하지않고 class를 하나더 만들면 된다.
-// 중복되는 코드가 있을경우 extends 를 사용하면 된다. 
+// super 라는 키워드에 대해서
+// super는 부모클래스를 불러서 부모클래스한테 일을 시키고 부모가하지 못하는일을 내가 처리하는것
+// super 뒤에 ()가 붙을 경우에는 부모클래스의 생성자이다.
+// syper 뒤에 .가 있을 경우에는 부모클래스이다.
