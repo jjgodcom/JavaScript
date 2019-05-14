@@ -1,8 +1,12 @@
 class person{
-
+    constructor(name, first, second){
+        this.name = name;
+        this.first = first;
+        this.second = second;
+    }
 }
 
-var kim = new person();
+var kim = new person('kim',10,20,30);
 console.log('kim의 값은',kim);
 
 
